@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  color: rgb(73, 73, 73);
+  background-color: #f0eded;
+  height: 100%;
+}
+
+.container {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.countries {
+  width: 100%;
+  display: flex;
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 1s;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.country {
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  width: 35rem;
+  border-radius: 0.8rem;
+
+  overflow: hidden;
+}
+
+.main__country--container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-self: center;
+}
+
+.main__country {
+  margin: auto auto;
+}
+
+.main__country::before {
+  content: 'Ваше местоположение';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: forestgreen;
+}
+
+.neighbour::before {
+  content: 'Соседняя Страна';
+  width: 100%;
+  position: absolute;
+  top: -5rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(128, 128, 128);
+}
+
+.neighbour {
+  transform: scale(0.7) translateY(1rem);
+}
+
+.country__img {
+  width: 100%;
+  object-fit: cover;
+  background-color: white;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.country__data {
+  padding: 2.6rem 3.8rem 3rem 3.8rem;
+}
+
+.country__name {
+  font-size: 2.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.country__region {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: rgb(133, 133, 133);
+}
+
+.country__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.country__row span {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 2.2rem;
+}
+
+.btn-country {
+  border: none;
+  font-size: 2rem;
+  padding: 2rem 5rem;
+  border-radius: 0.7rem;
+  color: white;
+  background-color: rgb(216, 11, 11);
+  cursor: pointer;
+}
+
+.btn-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 325px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
